@@ -1,0 +1,183 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: #cdb4db;
+}
+.container {
+  position: relative;
+
+  height: 100vh;
+  color: #580220;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+  font-family: "Playfair Display", serif; /* Google Font*/
+}
+
+/* Music List*/
+.music-list {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  margin: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+/*music list icon*/
+.music-list-icon {
+  /* set the color and size of music list icon */
+  fill: #4e007a;
+  font-size: 50px;
+
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+.hide-music-list-icon {
+  height: 0;
+  opacity: 0;
+}
+/* Song Container*/
+.song-container {
+  width: 300px;
+  background-color: #ffc8dd;
+
+  position: relative; /* to set layout of the back arrow*/
+
+  display: flex;
+  flex-direction: column;
+
+  padding-top: 50px;
+
+  height: 0; /* hide before opening song list*/
+  opacity: 0;
+
+  transition: all 0.5s ease;
+}
+.show-song-container {
+  height: auto;
+  opacity: 1;
+}
+
+/* back arrow */
+.fa-arrow-left {
+  font-size: 30px;
+  padding: 5px;
+  color: #580220;
+
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  cursor: pointer;
+}
+/* Song */
+.song {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px 30px;
+}
+/* Music Icon From Google Font*/
+.fa-music {
+  font-size: larger;
+}
+/* Song Info */
+.song-info {
+  display: flex;
+  flex-direction: column;
+
+  font-size: 17px;
+
+  margin-left: 20px;
+}
+.song:hover {
+  background-color: #f7a8c6;
+}
+.song-name {
+  margin: 0; /* removing original margin of h4 */
+}
+
+/* Title*/
+.title {
+  font-weight: 600;
+}
+
+/* Image */
+.image {
+  height: 30vh;
+  border-radius: 30px;
+}
+
+/*  Song Info At Main Page*/
+.song-info-at-main-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.song-name-at-main-page {
+  margin: 0; /* removing h1 original margin*/
+}
+.artist-name-at-main-page {
+  margin: 0; /* removing h1 original margin*/
+}
+
+/*  Button Container */
+.button-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 60px;
+  min-width: 17vw;
+}
+
+/* Next and Previous*/
+.fa-backward-step,
+.fa-forward-step {
+  font-size: 30px;
+}
+/* Play Button*/
+.fa-circle-play {
+  margin: 0px 12px;
+}
+
+.timeline-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  font-family: "Ubuntu", sans-serif; /* Google font for 00:00 */
+  font-size: 20px;
+}
+.timeline {
+  width: 30vw;
+  height: 4px;
+  background-color: #580220;
+  margin: 0px 10px;
+}
+.current-time {
+  width: 20vw;
+  height: 100%;
+  background-color: #bde0fe;
+}
+.current-time-indicator {
+  width: 11px;
+  height: 11px;
+  background-color: #580220;
+  margin-left: 20vw;
+  border: 4px solid #bde0fe;
+  border-radius: 40px;
+
+  position: relative;
+  bottom: 7.5px;
+}
