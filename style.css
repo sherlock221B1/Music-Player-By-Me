@@ -10,6 +10,8 @@ body {
 .container {
   position: relative;
 
+  overflow: hidden; /* hide the song container when it is heigher thann 100vh*/
+
   height: 100vh;
   color: #580220;
 
@@ -54,10 +56,19 @@ body {
 
   position: relative; /* to set layout of the back arrow*/
 
+  /* if the song container is higher than 70vh
+
+  min-height: 70vh;
+  overflow-x: hidden;
+  overflow-y: scroll;
+
+  သီချင်းတွေများလာရင် ဒီကောင်တွေ ကို js ကနေထည့်ပေးရမယ်။ နောက်အားမှ လုပ်တော့မယ်။
+*/
   display: flex;
   flex-direction: column;
 
   padding-top: 50px;
+  border-radius: 5px;
 
   height: 0; /* hide before opening song list*/
   opacity: 0;
@@ -117,7 +128,9 @@ body {
 .song-name {
   margin: 0; /* removing original margin of h4 */
 }
-
+.artist-name {
+  font-size: 13px;
+}
 /* Title*/
 .title {
   font-weight: 600;
