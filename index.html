@@ -42,50 +42,46 @@
         <div class="song-container">
           <!-- Back Arrow-->
           <i class="fa-solid fa-arrow-left"></i>
-          <!-- Song -->
-          <div class="song">
-            <!-- Music Icon From Font Awesome-->
-            <i class="fa-solid fa-music"></i>
-            <!-- Song Info -->
-            <div class="song-info">
-              <h4 class="song-name">နှလုံးသားမှာအားလုံးရှိတယ်</h4>
-              <span class="artist-name">နိုင်မြန်မာ</span>
-            </div>
-          </div>
-          <!-- Song -->
-          <div class="song">
-            <!-- Music Icon From Font Awesome-->
-            <i class="fa-solid fa-music"></i>
-            <!-- Song Info -->
-            <div class="song-info">
-              <h4 class="song-name">နှလုံးသားမှာအားလုံးရှိတယ်</h4>
-              <span class="artist-name">နိုင်မြန်မာ</span>
-            </div>
-          </div>
         </div>
       </div>
 
-      <div class="title">PLAYING x OF y</div>
+      <!-- Title-->
+      <div class="title"></div>
+      <!-- image -->
       <div><img class="image" src="MusicImage.jpg" /></div>
+
+      <!-- song info at main page-->
       <div class="song-info-at-main-page">
         <h1 class="song-name-at-main-page">Song Name</h1>
         <h4 class="artist-name-at-main-page">Artist Name</h4>
       </div>
+
+      <!-- button container-->
       <div class="button-container">
+        <!-- previous button-->
         <i class="fa-solid fa-backward-step"></i>
+        <!-- play button -->
         <i class="fa-regular fa-circle-play"></i>
+        <!-- next button -->
         <i class="fa-solid fa-forward-step"></i>
       </div>
-      <div class="timeline-container">
-        <span>00:00</span>
-        <div class="timeline">
-          <div class="current-time">
-            <div class="current-time-indicator">.</div>
+
+      <!--progressBar container-->
+      <div class="progress-bar-container">
+        <!-- current duration-->
+        <span class="current-duration">00:00</span>
+        <!-- progress bar-->
+        <div class="progress-bar">
+          <!-- current progress bar-->
+          <div class="current-progress-bar">
+            <!-- current progress bar indicator-->
+            <div class="current-progress-bar-indicator"></div>
           </div>
         </div>
-        <span>00:00</span>
+        <!-- total duration-->
+        <span class="total-duration">00:00</span>
       </div>
-      <audio src=""></audio>
+      <audio src="" class="audio"></audio>
     </div>
     <script src="script.js"></script>
   </body>

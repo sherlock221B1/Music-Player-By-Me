@@ -2,6 +2,7 @@ html,
 body {
   margin: 0;
   padding: 0;
+  user-select: none;
 }
 body {
   background-color: #cdb4db;
@@ -25,6 +26,7 @@ body {
   position: absolute;
   top: 15px;
   right: 15px;
+
   margin: 0;
 
   display: flex;
@@ -84,10 +86,20 @@ body {
   display: flex;
   flex-direction: row;
   align-items: center;
+
   padding: 0px 30px;
+  margin-top: 10px;
+
+  cursor: pointer;
+}
+/* clicked song*/
+.current-song {
+  color: #f51865; /*#617586*/ /* add the color to clicked song tag*/
 }
 /* Music Icon From Google Font*/
 .fa-music {
+  padding: 10px;
+  background-color: #ffafcc;
   font-size: larger;
 }
 /* Song Info */
@@ -109,6 +121,7 @@ body {
 /* Title*/
 .title {
   font-weight: 600;
+  color: #154168;
 }
 
 /* Image */
@@ -123,6 +136,7 @@ body {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  color: #154168;
 }
 .song-name-at-main-page {
   margin: 0; /* removing h1 original margin*/
@@ -141,43 +155,63 @@ body {
   min-width: 17vw;
 }
 
-/* Next and Previous*/
+/* Next and Previous Butttons*/
 .fa-backward-step,
 .fa-forward-step {
   font-size: 30px;
+  cursor: pointer;
 }
-/* Play Button*/
-.fa-circle-play {
+/* Play Button and Pause Button*/
+.fa-circle-play,
+.fa-circle-pause {
   margin: 0px 12px;
+  cursor: pointer;
+}
+.fa-backward-step:hover,
+.fa-forward-step:hover,
+.fa-circle-play:hover,
+.fa-circle-pause:hover {
+  color: #154168;
 }
 
-.timeline-container {
+/* Progress bar container*/
+.progress-bar-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
 
+  color: #154168;
+
   font-family: "Ubuntu", sans-serif; /* Google font for 00:00 */
   font-size: 20px;
 }
-.timeline {
+/* progress bar*/
+.progress-bar {
   width: 30vw;
   height: 4px;
   background-color: #580220;
-  margin: 0px 10px;
+  margin: 0px 12px;
 }
-.current-time {
-  width: 20vw;
+/* current progress bar*/
+.current-progress-bar {
+  width: 0;
   height: 100%;
   background-color: #bde0fe;
 }
-.current-time-indicator {
+/* current progress bar indicator*/
+.current-progress-bar-indicator {
   width: 11px;
   height: 11px;
   background-color: #580220;
-  margin-left: 20vw;
   border: 4px solid #bde0fe;
   border-radius: 40px;
-
+  margin-left: 100%;
   position: relative;
+  right: 9.5px;
   bottom: 7.5px;
+}
+
+.current-duration,
+.total-duration {
+  color: #bde0fe;
 }
